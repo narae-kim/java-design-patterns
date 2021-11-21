@@ -1,6 +1,5 @@
 package com.narae.design.strategy.example;
 
-// Wait, AI can eat???
 public class AI extends Genius {
     public AI() {
         eatBehavior = new EatNotPossible();

@@ -14,7 +14,7 @@ public abstract class Genius {
 
     public abstract void introduce();
 
-    // A localized update to the code caused a non local side effect
+    // A localized update to the code caused a non local side effect.
     public void eat() {
         System.out.println("Yum Yum ;O");
     }
