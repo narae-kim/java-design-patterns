@@ -44,6 +44,7 @@ Then, when performXXX() is called, the responsibility for the behavior is delega
 
 ### Diagram
 ![StrategyPatternExample](StrategyPatternExample.svg)
+
 *Composition:* an encapsulated family of algorithms for both eat and show off behaviors.
 
 ### Conclusion
