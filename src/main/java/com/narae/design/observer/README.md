@@ -27,7 +27,11 @@ Loosely coupled designs allow us to build flexible OO systems that can handle ch
 because they minimize the interdependency between objects.
 
 
-## The Observer Pattern 1
+Similarly, the order of notification could change and your application would produce incorrect results if we wrote the code to depend on a specific notification order. 
+Now that’s definitely not what we’d consider loosely coupled.
+
+
+## The Observer Pattern from scratch
 ![ObserverPattern1](OberserPattern1.svg)
 
 * Objects use the Subject interface to register as observers and also to remove themselves from being observers.
@@ -43,6 +47,15 @@ Each observer registers with a concrete subject to receive updates.
 
 
 ***Examples are in the `com.narae.design.observer.scratch` package.***
+
+## The observer Pattern by Java built-in API
+The built-in class `java.util.Observable` is no longer valid since the class has been deprecated.
+
+The built-in interface `java.util.Observer` is no longer valid since the interface has been deprecated.
+
+***References***
+- https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Observable.html
+- https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Observer.html
 
 
 ***Reference***: Head First Design Patterns
