@@ -4,9 +4,6 @@ package com.narae.design.decorator.example;
  * Milk is a decorator so it extends CondimentDecorator which extends Beverage.
  */
 public class Milk extends CondimentDecorator {
-    // An instance variable to hold the beverage we are wrapping.
-    Beverage beverage;
-
     // Set the reference to a Beverage to hold the beverage we are wrapping.
     public Milk(Beverage beverage) {
         this.beverage = beverage;

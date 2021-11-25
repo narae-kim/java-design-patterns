@@ -1,12 +1,24 @@
 package com.narae.design.decorator.example;
 
 public class DecafAmericano extends Beverage {
-    public DecafAmericano() {
+
+    public DecafAmericano(BeverageSize beverageSize) {
         description = "Decaffeinated Americano";
+        size = beverageSize;
     }
 
     @Override
     public double cost() {
-        return 3.40;
+        double cost;
+        if (getSize() == BeverageSize.TALL) {
+            cost = 3.10;
+        } else if (getSize() == BeverageSize.GRANDE) {
+            cost = 3.30;
+        } else if (getSize() == BeverageSize.VENTI) {
+            cost = 3.50;
+        } else {
+            cost = 0.00;
+        }
+        return cost;
     }
 }

@@ -4,9 +4,6 @@ package com.narae.design.decorator.example;
  * Whip is a decorator so it extends CondimentDecorator which extends Beverage.
  */
 public class Whip extends CondimentDecorator {
-    // An instance variable to hold the beverage we are wrapping.
-    Beverage beverage;
-
     // Set the reference to a Beverage to hold the beverage we are wrapping.
     public Whip(Beverage beverage) {
         this.beverage = beverage;
@@ -30,6 +27,14 @@ public class Whip extends CondimentDecorator {
      */
     @Override
     public double cost() {
-        return 0.30 + beverage.cost();
+        double cost = beverage.cost();
+        if (getSize() == BeverageSize.TALL) {
+            cost += 0.20;
+        } else if (getSize() == BeverageSize.GRANDE) {
+            cost += 0.30;
+        } else if (getSize() == BeverageSize.VENTI) {
+            cost += 0.35;
+        }
+        return cost;
     }
 }
