@@ -2,10 +2,14 @@
 **The Adapter Pattern converts the interface of a class into another interface the clients expect. 
 Adapter lets classes work together that could not otherwise because of incompatible interfaces.**
 
+The intent of the Adapter Pattern is to alter an interface so that it matches one a client is expecting.
+
 * The Adapter Pattern allows one interface to adapt a different interface for a class that implements it. 
 
 * The Adapter Pattern decouples the client from the implemented interface, and if we expect the interface to change over time, 
 the adapter encapsulates that change so that the client does not have to be modified each time it needs to operate against a different interface.
+
+* The Adapter Pattern allows the adapter to adapt one or more classes to provide the interface a client is coded to.
 
 > If it walks like a duck and quacks like a duck, then it might be a turkey wrapped with a duck adapter!
 
