@@ -70,6 +70,3 @@ In other words, the code will not be *closed for modification*.
 * Factory Method: Encapsulating object creation.
   - Place the code in an object that is only going to worry about how to create concrete products.
 
-
-## References
-* Head First Design Patterns
