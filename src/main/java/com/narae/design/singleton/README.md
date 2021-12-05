@@ -1,5 +1,26 @@
 # The Singleton Pattern
 The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
+ 
+ 
+***Use cases*** (where only one copy should exist):
+- Shared resource
+  - An object that contains registry settings
+- When managing pools of resources
+  - Thread pools
+  - Where multiple connections are not allowed
+- Spring Beans
+- Lambda expression beyond Java 8
+
+
+***Downsides*** of this singleton design:
+  - Mocking not able since it is static
+
+***Alternatives*** for where this singleton design does not fit:
+- Enum
+- Inner class holder pattern
+  - It stops race conditions
+- `java.util.concurrent` API instead of `synchronized`
+
 
 ## Thread NOT safe scenario
 ```
@@ -47,6 +68,7 @@ We can enhance the thread safety by introducing the `synchronized` keyword
 ### Solution 2
 ```
 public static Singleton {
+    // eagar loading or eagar instantiation
     // create an instance of Singleton in a static initializer
     private static Singleton oneAndOnlyOneObject = new Singleton();
 

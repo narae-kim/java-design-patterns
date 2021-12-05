@@ -30,7 +30,7 @@ public class Singleton {
      * @return ensured one and the only object of the class itself
      */
     public static Singleton getInstance() {
-        if (oneAndOnlyOneObject == null) {  // thread-safe
+        if (oneAndOnlyOneObject == null) {  // thread-safe  // volatile keyword required
             synchronized (Singleton.class) {  // thread-safe
                 if (oneAndOnlyOneObject == null) {
                     oneAndOnlyOneObject = new Singleton();
