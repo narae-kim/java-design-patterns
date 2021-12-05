@@ -13,9 +13,5 @@ When you need to decouple an object making requests from the objects that know h
 
 
 ## Example scenario 
-
-
-
-
-## Diagram
+![MyCommandExample](MyCommand.png)
 
